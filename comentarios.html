@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comentarios</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Centrado del contenido principal */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #comentarios {
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #comentario-form {
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        #nuevo-comentario {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #f08080;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff7f7f;
+        }
+
+        #gracias {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #gracias img {
+            width: 200px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comentarios de Viajeros</h1>
+    </header>
+
+    <div id="comentarios">
+        <p><strong>María:</strong> Me encantó Yucatán.</p>
+    </div>
+
+    <div id="comentario-form">
+        <textarea id="nuevo-comentario" placeholder="Escribe tu comentario..."></textarea>
+        <button onclick="agregarComentario()">Enviar</button>
+    </div>
+
+    <div id="gracias">
+        <p>¡Gracias, vuelva pronto!</p>
+        <img src="gracias-image.jpg" alt="Gracias Vuelva Pronto">
+    </div>
+
+    <script>
+        function agregarComentario() {
+            const comentario = document.getElementById("nuevo-comentario").value;
+            if (comentario.trim() !== "") {
+                const comentarioDiv = document.createElement("div");
+                comentarioDiv.innerHTML = `<p><strong>Nuevo viajero:</strong> ${comentario}</p>`;
+                document.getElementById("comentarios").appendChild(comentarioDiv);
+                document.getElementById("nuevo-comentario").value = ""; // Limpiar el campo de texto
+            } else {
+                alert("Por favor, escribe un comentario.");
+            }
+        }
+        
+    </script>
+     <div class="volver-inicio">
+        <a href="index.html" class="button">Volver al Inicio</a>
+    </div>
+</body>
+</html>
+
+

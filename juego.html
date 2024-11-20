@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Turismo en Yucatán</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>¡Aventura Turística en Yucatán!</h1>
+        <p>Responde correctamente las preguntas sobre Yucatán y suma puntos. ¿Cuánto sabes de Yucatán?</p>
+    </header>
+
+    <section id="game-section">
+        <h2 id="pregunta"></h2>
+        <div id="imagen-pregunta">
+            <img id="imagen" src="yucatan.jpg" alt="Imagen de la pregunta" />
+        </div>
+        <button id="button1" onclick="responder(1)">Opción 1</button>
+        <button id="button2" onclick="responder(2)">Opción 2</button>
+        <button id="button3" onclick="responder(3)">Opción 3</button>
+        <p id="puntaje">Puntaje: 0</p>
+        <p id="mensaje"></p>
+    </section>
+
+    <a href="index.html">Volver al Inicio</a>
+
+    <script src="script1.js"></script>
+</body>
+</html>
